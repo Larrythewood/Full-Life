@@ -6,6 +6,8 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
+/*
+
     //gun Stats
     [Header("Gun Stats")]
     public int damage;
@@ -46,7 +48,7 @@ public class Weapon : MonoBehaviour
     }
     public void Shoot()
     {
-        //schaut ob der spamm click couldown schon durch is und läst dann wieder schießen
+        //schaut ob der spamm click couldown schon durch is und lï¿½st dann wieder schieï¿½en
         if (redayToShoot)
         {
             redayToShoot = false;
@@ -55,10 +57,8 @@ public class Weapon : MonoBehaviour
 
 
 
-                /*
-                 wenn man WASD macht oder Space dann mach var spread += 1.5f oder so
-                 else .... 
-                 */
+                //wenn man WASD macht oder Space dann mach var spread += 1.5f oder so else .... 
+                
 
                 //Spreed
                 float x = Random.Range(-spread, spread);
@@ -67,12 +67,12 @@ public class Weapon : MonoBehaviour
                 Vector3 direction = fpsCam.transform.forward + new Vector3(x, y, 0);
                 //RayCast
                 //schaut ob er ein OBJ(GameObject) hited 
-                if (Physics.Raycast(fpsCam.transform.position, direction, out rayHit, range/*, whatIsEnemy*/))
+                if (Physics.Raycast(fpsCam.transform.position, direction, out rayHit, range))
                 {
                     //schaut ob man dem OBJ Schaden machen kann
                     if (rayHit.collider.GetComponent<Damageable>() != null)
                     {
-                        //macht schaden und gibt die position für die hit animation an
+                        //macht schaden und gibt die position fï¿½r die hit animation an
                         rayHit.collider.GetComponent<Damageable>().TakeDamage(damage, rayHit.point, rayHit.normal);
                     }
                 }
@@ -89,11 +89,11 @@ public class Weapon : MonoBehaviour
 
         if (CanShoot() == true)
         {
-            //Schießt dann schaut er ob dauerfeuer bei der waffe an ist
+            //Schieï¿½t dann schaut er ob dauerfeuer bei der waffe an ist
             Shoot();
             if (canRapidFire)
             {
-                //wenn ja wartet der die FeuerRate ab und schießt dann noch mal in einer schleife
+                //wenn ja wartet der die FeuerRate ab und schieï¿½t dann noch mal in einer schleife
                 while ((CanShoot() == true))
                 {
                     yield return 0;
@@ -101,7 +101,7 @@ public class Weapon : MonoBehaviour
                 }
             }
         }
-        //Wenn man nicht schießen kann aber auch nicht reloadet 
+        //Wenn man nicht schieï¿½en kann aber auch nicht reloadet 
         else if ((CanShoot() == false) && (isReloading == false))
         {
             //started Reload()
@@ -144,5 +144,5 @@ public class Weapon : MonoBehaviour
 
 
 
-
+    */
 }

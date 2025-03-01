@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class WeaponSwitching : MonoBehaviour
 {
+    /*
     public InputManager inputManager;
     //Gibt an wieviele Waffen es in dem aktiven Spiel gibt
     private int weaponCount;
@@ -47,5 +48,6 @@ public class WeaponSwitching : MonoBehaviour
             SelectWeapon();
         }
     }
+    */
 }
 
