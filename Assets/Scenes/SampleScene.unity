@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 529509036}
   - component: {fileID: 529509035}
   - component: {fileID: 529509034}
+  - component: {fileID: 529509040}
   - component: {fileID: 529509039}
   - component: {fileID: 529509038}
   m_Layer: 0
@@ -261,7 +262,22 @@ MonoBehaviour:
   speed: 20
   gravity: -9.81
   jumpPower: 3
-  e: -0.7
+  pullForce: -3
+--- !u!114 &529509040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 529509033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9ec444e5d7054946a1a9f69191cd751, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 815356215}
+  xSensitivity: 30
+  ySensitivity: 30
 --- !u!1 &815356213
 GameObject:
   m_ObjectHideFlags: 0
